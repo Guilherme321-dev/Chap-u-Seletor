@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="PT-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Chapéu Seletor - Hogwarts</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="visual.css">
+		<script type="text/javascript" src="meus_scripts.js"></script>
+	</head>
+	<body>
+		<div class="all">
+			<header>
+				<h1>Olá, Eu sou o Chapéu Seletor!</h1>
+				<h2>Após responder algumas perguntas irei dizer qual das casas de Hogwarts você irá!</h2>
+			</header>
+			<main>
+				<form name="opcoes" method="get">
+					<ol class="questoes">
+						<li>
+							<h3>Qual dessas cores você gosta mais?</h3>
+							<ol class="opt">
+								<li><input type="radio" name="cor" value="A" id="vermelho"><label for="vermelho">Vermelho</label></li>
+								<li><input type="radio" name="cor" value="B" id="verde"><label for="verde">Verde</label></li>
+								<li><input type="radio" name="cor" value="C" id="azul"><label for="azul">Azul</label></li>
+								<li><input type="radio" name="cor" value="D" id="amarelo"><label for="amarelo">Amarelo</label></li>
+							</ol>
+						</li>
+						<li>
+							<h3>Que tipo de animal lhe agrada mais?</h3>
+							<ol class="opt">
+								<li><input type="radio" name="animal" value="B" id="repteis"><label for="repteis">Répteis</label></li>
+								<li><input type="radio" name="animal" value="A" id="mamiferos"><label for="mamiferos">Mamíferos</label></li>
+								<li><input type="radio" name="animal" value="D" id="insetos"><label for="insetos">Insetos</label></li>
+								<li><input type="radio" name="animal" value="C" id="aves"><label for="aves">Aves</label></li>
+							</ol>
+						</li>
+						<li>
+							<h3>Com qual elemento você mais se identifica?</h3>
+							<ol class="opt">
+								<li><input type="radio" name="elemento" value="D" id="terra"><label for="terra">Terra</label></li>
+								<li><input type="radio" name="elemento" value="B" id="agua"><label for="agua">Água</label></li>
+								<li><input type="radio" name="elemento" value="C" id="ar"><label for="ar">Ar</label></li>
+								<li><input type="radio" name="elemento" value="A" id="fogo"><label for="fogo">Fogo</label></li>
+							</ol>
+						</li>
+						<li>
+							<h3>Você quer ser lembrado por ser ?</h3>
+							<ol class="opt">
+								<li><input type="radio" name="alma" value="C" id="bom"><label for="bom">Bom</label></li>
+								<li><input type="radio" name="alma" value="B" id="grande"><label for="grande">Grande</label></li>
+								<li><input type="radio" name="alma" value="A" id="sabio"><label for="sabio">Sábio</label></li>
+								<li><input type="radio" name="alma" value="D" id="bravo"><label for="bravo">Bravo</label></li>
+							</ol>
+						</li>
+						<li>
+							<h3>Que feitiço você acha mais interessante?</h3>
+							<ol class="opt">
+								<li><input type="radio" name="feitico" value="D" id="salvio"><label for="salvio">Salvio Hexia</label></li>
+								<li><input type="radio" name="feitico" value="B" id="aquamenti"><label for="aquamenti">Aquamenti</label></li>
+								<li><input type="radio" name="feitico" value="C" id="mobili"><label for="mobili">Mobili Corpus</label></li>
+								<li><input type="radio" name="feitico" value="A" id="expelliarmus"><label for="expelliarmus">Expelliarmus</label></li>
+							</ol>
+						</li>
+						<li>
+							<h3>Com qual desses professores você gostaria de ter amizade?</h3>
+							<ol class="opt">
+								<li><input type="radio" name="amizade" value="B" id="severo"><label for="severo">Prof. Severo Snape</label></li>
+								<li><input type="radio" name="amizade" value="A" id="minerva"><label for="minerva">Profª. Minerva McGonagall</label></li>
+								<li><input type="radio" name="amizade" value="D" id="sprout"><label for="sprout">Profª. Sprout</label></li>
+								<li><input type="radio" name="amizade" value="C" id="filius"><label for="filius">Prof. Filius Flitwick</label></li>
+							</ol>
+						</li>
+						<li>
+							<h3>Qual dessas características você mais aprecia em uma pessoa?</h3>
+							<ol class="opt">
+								<li><input type="radio" name="caracteristica" value="D" id="lealdade"><label for="lealdade">Lealdade</label></li>
+								<li><input type="radio" name="caracteristica" value="C" id="inteligencia"><label for="inteligencia">Inteligência</label></li>
+								<li><input type="radio" name="caracteristica" value="B" id="astucia"><label for="astucia">Astúcia</label></li>
+								<li><input type="radio" name="caracteristica" value="A" id="coragem"><label for="coragem">Coragem</label></li>
+							</ol>
+						</li>
+					</ol>
+					<div class="center">
+		
+						<button type="button" class="btn" data-toggle="modal" data-target="#myModal" onclick="javascript:verificaChecks()">VAMOS NESSA!</button>
+					</div>
+				</form>
+				
+				<div id="myModal" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+						
+						<div class="modal-content">
+							
+							<div class="modal-body">
+								<h2 class="modal-title" id="resultado">
+									<script>function result(){document.getElementById("resultado").innerHTML = resultado;}</script>
+								</h2>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn_default" data-dismiss="modal">Fechar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer>:: Guilherme Delgado 2022 ::</footer>
+		</div>
+	</body>
+</html>

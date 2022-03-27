@@ -1,0 +1,84 @@
+*{
+margin:0;
+padding:0;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+color:#FFF;
+}
+.all{
+	width:700px;
+	margin:auto;
+	border:double 8px #FFF;
+	padding:0 50px;
+	background-color: #660000;
+}
+.aviso{
+	color:white;
+}
+.center{
+	text-align:center;
+}
+body{
+	padding:10px;
+	background:url(casashogwarts.png);
+	}
+h1{
+	color:white;
+	font-size: 30px;
+}
+.modal-title{
+	color: #660000;
+	font-size: 17px;
+}
+h2{
+	color:#fff;
+	font-size: 24px;
+}
+h3{
+	text-align: #fff;
+	font-size: 17px;
+}
+h4{
+	color:#000;
+}
+ol.questoes li{
+	list-style-type:decimal;
+	font-size:17px;
+}
+ol.opt li{
+	list-style-type:lower-alpha;
+	margin-left:40px;
+}
+input[type="radio"],
+label{
+	cursor:pointer;
+}
+label{
+	display:inline-block;
+	border:solid 1px #ccc;
+	width:200px;
+	text-align:center;
+	margin-left:10px;
+	font-size:15px;
+	border:dotted 1px white;
+	}
+button{
+	width:50%;
+	height:40px;
+	margin:20px 0;
+	}
+.btn{
+	background-color: #FFF;
+	color: #660000;
+}
+.btn_default{
+	background-color: #660000;
+	color: #FFF;
+}
+footer{
+	text-align:center;
+	color: white;
+	margin:20px 0 40px 0;
+	padding:10px 0;
+	border-top:dashed 1px white;
+	border-bottom:dashed 1px white;
+	}
